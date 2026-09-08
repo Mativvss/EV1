@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro - LevelUp Gamer</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="registro.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Registro de usuario</h1>
+  </header>
+
+  <form id="formRegistro">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required>
+
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo" required>
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" required>
+
+    <button type="submit">Registrarse</button>
+  </form>
+
+  <p id="mensaje"></p>
+</body>
+</html>
