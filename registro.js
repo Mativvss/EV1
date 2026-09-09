@@ -1,10 +1,17 @@
 document.getElementById("formRegistro").addEventListener("submit", function(event) {
   event.preventDefault();
 
-  const nombre = document.getElementById("nombre").value;
-  const correo = document.getElementById("correo").value;
+  const nombre = document.getElementById("nombre").value.trim();
+  const correo = document.getElementById("correo").value.trim();
   const edad = parseInt(document.getElementById("edad").value);
   const mensaje = document.getElementById("mensaje");
+
+  // Validaciones
+  if (nombre === "" || correo === "" || isNaN(edad)) {
+    mensaje.textContent = "Por favor completa todos los campos.";
+    mensaje.style.color = "red";
+    return;
+  }
 
   if (edad < 18) {
     mensaje.textContent = "Debes tener al menos 18 años para registrarte.";
